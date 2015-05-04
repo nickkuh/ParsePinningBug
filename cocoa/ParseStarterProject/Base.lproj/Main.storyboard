@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1zG-Fd-7iB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Pinning Bug-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gmK-Tt-ai4">
+                                <rect key="frame" x="253" y="278" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bLz-q3-xVw"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-Ps-GC4">
+                                <rect key="frame" x="253" y="241" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVU-zE-adz">
+                                <rect key="frame" x="263" y="334" width="75" height="30"/>
+                                <state key="normal" title="Pin Locally">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pinLocally:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KBA-9s-ML2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33F-zO-HZA">
+                                <rect key="frame" x="233" y="372" width="135" height="30"/>
+                                <state key="normal" title="Update from Server">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateFromServer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WEl-pY-JR4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wam-I0-NBq">
+                                <rect key="frame" x="250" y="410" width="101" height="30"/>
+                                <state key="normal" title="Save to Server">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePinnedToServer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1qo-k1-djH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="gmK-Tt-ai4" secondAttribute="centerY" id="0xd-c7-KZP"/>
+                            <constraint firstItem="Wam-I0-NBq" firstAttribute="top" secondItem="33F-zO-HZA" secondAttribute="bottom" constant="12" id="2Lz-Tx-sfI"/>
+                            <constraint firstItem="zgd-Ps-GC4" firstAttribute="centerX" secondItem="gmK-Tt-ai4" secondAttribute="centerX" id="Bjj-n8-4ly"/>
+                            <constraint firstItem="gmK-Tt-ai4" firstAttribute="top" secondItem="zgd-Ps-GC4" secondAttribute="bottom" constant="16" id="I4I-Qk-SKh"/>
+                            <constraint firstItem="33F-zO-HZA" firstAttribute="centerX" secondItem="Wam-I0-NBq" secondAttribute="centerX" id="Oi4-9x-Yrc"/>
+                            <constraint firstItem="RVU-zE-adz" firstAttribute="centerX" secondItem="gmK-Tt-ai4" secondAttribute="centerX" constant="0.5" id="Siy-NH-Kmk"/>
+                            <constraint firstAttribute="centerX" secondItem="gmK-Tt-ai4" secondAttribute="centerX" id="d8O-GQ-cAf"/>
+                            <constraint firstItem="RVU-zE-adz" firstAttribute="top" secondItem="gmK-Tt-ai4" secondAttribute="bottom" constant="27" id="j6s-gb-GMm"/>
+                            <constraint firstItem="33F-zO-HZA" firstAttribute="top" secondItem="RVU-zE-adz" secondAttribute="bottom" constant="12" id="khV-TI-MwZ"/>
+                            <constraint firstItem="33F-zO-HZA" firstAttribute="centerX" secondItem="RVU-zE-adz" secondAttribute="centerX" id="swe-wg-aJD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pinning Bug" id="me0-4b-SLx"/>
+                    <connections>
+                        <outlet property="label" destination="zgd-Ps-GC4" id="q1k-Nb-7nl"/>
+                        <outlet property="stepper" destination="gmK-Tt-ai4" id="3Y1-fY-SdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hRU-gB-a3E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1zG-Fd-7iB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K9k-eC-WbO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qDo-1m-jpa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56M-9c-z0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="252"/>
+        </scene>
+    </scenes>
+</document>
